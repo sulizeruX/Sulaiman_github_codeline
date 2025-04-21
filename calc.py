@@ -12,6 +12,9 @@ def factorial(num1):
         result = result * (num1 - i)
     print("the factorial of " + num1 + " is " + result)
 
+def absolute(num1):
+    print(abs(num1))
+
 strike = 0
 
 num1 = input("input the first number or else: \n")
@@ -20,7 +23,7 @@ while not num1.isnumeric():
     num1 = input("I SAID PUT A NUMBER!!!!!!!!!: \n")
     strike += 1
 
-num2 = input("now don't you play with me, if I don't see a second number, I promise I will rip out your soul \n or you could type f for factorial of your first number:) :\n")
+num2 = input("now don't you play with me, if I don't see a second number, I promise I will rip out your soul \n or you could type 'f' for factorial or 'a' for absolute value of your first number:) :\n")
 
 while (not num2.isnumeric()) or num2 != "f":
     num2 = input("(whisper's)I am holding you a gun point, PICK A NUMBER!!!!!!! \n: ")
