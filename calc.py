@@ -25,24 +25,26 @@ while not num1.isnumeric():
 
 num2 = input("now don't you play with me, if I don't see a second number, I promise I will rip out your soul \n or you could type 'f' for factorial or 'a' for absolute value of your first number:) :\n")
 
-while (not num2.isnumeric()) or num2 != "f":
-    num2 = input("(whisper's)I am holding you a gun point, PICK A NUMBER!!!!!!! \n: ")
+while (not num2.isnumeric()) or num2 != "f" or num2 != "a":
+    num2 = input("(whisper's in the ear)I am holding you a gun point\nPICK A NUMBER NOW!!!!!!! \n: ")
     strike += 1
 
 if num2 == "f":
     factorial(num1)
+elif num2 == "a":
+    absolute(num1)
 else:
-    operation = input("now choose +, -, *, /, or power: \n")
+    operation = input("now choose +, -, *, /, power, OR, AND, or XOR: \n")
 
-    while operation != "+" or operation != "-" or operation != "*" or operation != "/" or operation != power:
+    while operation != "+" or operation != "-" or operation != "*" or operation != "/" or operation != "power" or operation != "OR" or operation != "AND" or operation != "XOR":
         strike += 1
         if strike >= 3:
-            print("that is it, I AM GONNA DESTROY YOUR LAPTOP NOW!!!! \n in 5 seconds that is\n")
-            time.sleep(5)
+            print("that is it, I AM GONNA DESTROY YOUR LAPTOP NOW!!!! \n you have 10 seconds to say bye to your laptop\n")
+            time.sleep(10)
             print("YOU DID THIS!!!!!! \n" * 1000)
             break
         else:
-            operation = input("don't you play with me, IT'S A SIMPLE CHOICE!!!!\n +, -, *, /, OR POWER(in small letters of course) :\n")
+            operation = input("don't you play with me, IT'S A SIMPLE CHOICE!!!!\n +, -, *, /, POWER(in small letters of course), OR, AND, or XOR!!!!!!!! :\n")
 
     if operation == "+":
         result = int(num1) + int(num2)
@@ -58,3 +60,9 @@ else:
         print(num1 + "/" + num2 + "=" + result)
     elif operation == "power":
         power(num1, num2)
+    elif operation == "OR":
+        print(num1 | num2)
+    elif operation == "AND":
+        print(num1 & num2)
+    elif operation == "XOR":
+        print(num1 ^ num2)
